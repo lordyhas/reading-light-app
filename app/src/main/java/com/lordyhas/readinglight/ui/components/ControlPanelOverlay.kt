@@ -47,9 +47,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lordyhas.readinglight.R
 import com.lordyhas.readinglight.ui.main.MainUiState
 
 @Composable
@@ -104,7 +106,7 @@ fun ControlPanelOverlay(
                         modifier = Modifier.size(22.dp)
                     )
                     Text(
-                        text = "Lampe de Lecture",
+                        text = stringResource(R.string.panel_title),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = Color.White
@@ -112,7 +114,7 @@ fun ControlPanelOverlay(
                 }
 
                 Text(
-                    text = "Touchez l'écran pour masquer",
+                    text = stringResource(R.string.panel_hint),
                     style = MaterialTheme.typography.labelSmall,
                     color = Color.White.copy(alpha = 0.5f)
                 )
@@ -126,7 +128,7 @@ fun ControlPanelOverlay(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "Luminosité de l'écran",
+                        text = stringResource(R.string.brightness_label),
                         style = MaterialTheme.typography.labelLarge,
                         color = Color.White.copy(alpha = 0.9f),
                         fontWeight = FontWeight.SemiBold
@@ -148,7 +150,7 @@ fun ControlPanelOverlay(
                 ) {
                     Icon(
                         imageVector = Icons.Default.BrightnessLow,
-                        contentDescription = "Luminosité min",
+                        contentDescription = stringResource(R.string.brightness_min),
                         tint = Color.White.copy(alpha = 0.6f),
                         modifier = Modifier.size(20.dp)
                     )
@@ -170,7 +172,7 @@ fun ControlPanelOverlay(
 
                     Icon(
                         imageVector = Icons.Default.BrightnessHigh,
-                        contentDescription = "Luminosité max",
+                        contentDescription = stringResource(R.string.brightness_max),
                         tint = Color.White.copy(alpha = 0.9f),
                         modifier = Modifier.size(22.dp)
                     )
@@ -214,7 +216,7 @@ fun ControlPanelOverlay(
                             modifier = Modifier.size(18.dp)
                         )
                         Text(
-                            text = "Couleur personnalisée",
+                            text = stringResource(R.string.custom_color),
                             style = MaterialTheme.typography.bodyMedium,
                             color = Color.White.copy(alpha = 0.9f)
                         )
@@ -260,7 +262,7 @@ fun ControlPanelOverlay(
                             modifier = Modifier.size(18.dp)
                         )
                         Text(
-                            text = "Minuterie de sommeil",
+                            text = stringResource(R.string.sleep_timer),
                             style = MaterialTheme.typography.labelLarge,
                             color = Color.White.copy(alpha = 0.9f),
                             fontWeight = FontWeight.SemiBold
@@ -269,7 +271,7 @@ fun ControlPanelOverlay(
 
                     if (uiState.formattedRemainingTime != null) {
                         Text(
-                            text = "Fin dans : ${uiState.formattedRemainingTime}",
+                            text = stringResource(R.string.sleep_timer_remaining, uiState.formattedRemainingTime.orEmpty()),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = if (uiState.isFadingOut) Color(0xFFFF5252) else Color(0xFFFFBF00)
@@ -284,7 +286,7 @@ fun ControlPanelOverlay(
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     val timerOptions = listOf<Pair<Int?, String>>(
-                        null to "Off",
+                        null to stringResource(R.string.sleep_timer_off),
                         15 to "15m",
                         30 to "30m",
                         60 to "60m"
@@ -320,7 +322,7 @@ fun ControlPanelOverlay(
                 if (uiState.isFadingOut) {
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = "Extinction progressive en cours...",
+                        text = stringResource(R.string.fading_out),
                         style = MaterialTheme.typography.bodySmall,
                         color = Color(0xFFFF8A80),
                         fontSize = 11.sp

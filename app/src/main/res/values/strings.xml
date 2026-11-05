@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">ReadingLight</string>
+    <string name="app_name" translatable="false">ReadingLight</string>
+
+    <!-- Control panel -->
+    <string name="panel_title">Reading Lamp</string>
+    <string name="panel_hint">Tap the screen to hide</string>
+    <string name="brightness_label">Screen brightness</string>
+    <string name="brightness_min">Minimum brightness</string>
+    <string name="brightness_max">Maximum brightness</string>
+    <string name="custom_color">Custom color</string>
+    <string name="sleep_timer">Sleep timer</string>
+    <string name="sleep_timer_remaining">Ends in: %1$s</string>
+    <string name="sleep_timer_off">Off</string>
+    <string name="fading_out">Gradually dimming…</string>
+
+    <!-- Presets -->
+    <string name="presets_title">Recommended tints</string>
+    <string name="preset_selected">Selected</string>
+    <string name="preset_deep_red">Melatonin Red</string>
+    <string name="preset_deep_red_subtitle">Zero blue light</string>
+    <string name="preset_warm_amber">Warm Amber</string>
+    <string name="preset_warm_amber_subtitle">Soothing reading</string>
+    <string name="preset_soft_white">Soft White</string>
+    <string name="preset_soft_white_subtitle">Natural light</string>
+    <string name="preset_sepia">Sepia</string>
+    <string name="preset_sepia_subtitle">Old paper</string>
+
+    <!-- Color picker -->
+    <string name="color_picker_title">Custom adjustment</string>
+    <string name="color_picker_hue">Hue</string>
+    <string name="color_picker_saturation">Saturation</string>
+    <string name="color_picker_intensity">Intensity</string>
 </resources>
