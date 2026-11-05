@@ -12,6 +12,7 @@
   <a href="https://github.com/lordyhas/reading-light-app/releases/latest"><img src="https://img.shields.io/github/v/release/lordyhas/reading-light-app?label=version" alt="Latest version" /></a>
   <a href="https://github.com/lordyhas/reading-light-app/actions/workflows/ci.yml"><img src="https://github.com/lordyhas/reading-light-app/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white" alt="Android 7.0+" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
 </p>
 
 ---
@@ -85,6 +86,10 @@ Every push to the `production` branch triggers [the release workflow](.github/wo
 ## Contributing
 
 Issues and pull requests are welcome. Open PRs against the `main` branch: CI runs the tests, lint and a debug build there.
+
+## License
+
+ReadingLight is released under the [MIT License](LICENSE).
 
 ---
 
