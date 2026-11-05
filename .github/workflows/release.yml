@@ -47,7 +47,7 @@ jobs:
           echo "SIGNING_STORE_FILE=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
 
       - name: Unit tests
-        run: ./gradlew testReleaseUnitTest
+        run: ./gradlew testDebugUnitTest
 
       - name: Build signed APK and AAB
         env:
