@@ -1,26 +1,32 @@
 package com.lordyhas.readinglight.ui.main
 
+import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
+import com.lordyhas.readinglight.R
 
-enum class LightPreset(val title: String, val subtitle: String, val color: Color) {
+enum class LightPreset(
+    @StringRes val title: Int,
+    @StringRes val subtitle: Int,
+    val color: Color
+) {
     DEEP_RED(
-        title = "Rouge Mélatonine",
-        subtitle = "Zéro lumière bleue",
+        title = R.string.preset_deep_red,
+        subtitle = R.string.preset_deep_red_subtitle,
         color = Color(0xFFFF0000)
     ),
     WARM_AMBER(
-        title = "Ambre Chaud",
-        subtitle = "Lecture apaisante",
+        title = R.string.preset_warm_amber,
+        subtitle = R.string.preset_warm_amber_subtitle,
         color = Color(0xFFFFBF00)
     ),
     SOFT_WHITE(
-        title = "Blanc Doux",
-        subtitle = "Lumière naturelle",
+        title = R.string.preset_soft_white,
+        subtitle = R.string.preset_soft_white_subtitle,
         color = Color(0xFFFFF4E5)
     ),
     SEPIA(
-        title = "Sépia",
-        subtitle = "Papier ancien",
+        title = R.string.preset_sepia,
+        subtitle = R.string.preset_sepia_subtitle,
         color = Color(0xFF704214)
     )
 }
