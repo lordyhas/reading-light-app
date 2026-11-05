@@ -31,9 +31,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lordyhas.readinglight.R
 import com.lordyhas.readinglight.ui.main.LightPreset
 
 @Composable
@@ -44,7 +46,7 @@ fun PresetsRow(
 ) {
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
-            text = "Teintes recommandées",
+            text = stringResource(R.string.presets_title),
             style = MaterialTheme.typography.labelLarge,
             color = Color.White.copy(alpha = 0.9f),
             fontWeight = FontWeight.SemiBold,
@@ -109,7 +111,7 @@ private fun PresetItem(
                     val checkColor = if (preset.color.luminance() > 0.5f) Color.Black else Color.White
                     Icon(
                         imageVector = Icons.Default.Check,
-                        contentDescription = "Sélectionné",
+                        contentDescription = stringResource(R.string.preset_selected),
                         tint = checkColor,
                         modifier = Modifier.size(20.dp)
                     )
@@ -119,7 +121,7 @@ private fun PresetItem(
             Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = preset.title,
+                text = stringResource(preset.title),
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,

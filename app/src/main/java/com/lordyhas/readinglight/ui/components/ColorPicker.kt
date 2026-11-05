@@ -27,10 +27,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lordyhas.readinglight.R
 
 @Composable
 fun ColorPicker(
@@ -78,7 +80,7 @@ fun ColorPicker(
                         .border(1.5.dp, Color.White.copy(alpha = 0.6f), CircleShape)
                 )
                 Text(
-                    text = "Ajustement personnalisé",
+                    text = stringResource(R.string.color_picker_title),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = Color.White
@@ -104,7 +106,7 @@ fun ColorPicker(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(text = "Teinte", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
+                Text(text = stringResource(R.string.color_picker_hue), fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
                 Text(text = "${hue.toInt()}°", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
             }
             Slider(
@@ -129,7 +131,7 @@ fun ColorPicker(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(text = "Saturation", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
+                Text(text = stringResource(R.string.color_picker_saturation), fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
                 Text(text = "${(saturation * 100).toInt()}%", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
             }
             Slider(
@@ -154,7 +156,7 @@ fun ColorPicker(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(text = "Intensité", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
+                Text(text = stringResource(R.string.color_picker_intensity), fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
                 Text(text = "${(value * 100).toInt()}%", fontSize = 12.sp, color = Color.White.copy(alpha = 0.7f))
             }
             Slider(
